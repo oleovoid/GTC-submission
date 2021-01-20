@@ -1,0 +1,17 @@
+{%load static%}
+
+<h1> Thrift shops in Singapore</h1>
+
+<a href='/east'>East</a>
+<a href='/west'>West</a>
+<a href='/north'>North</a>
+<a href='/south'>South</a>
+
+{% for link in alllinks %}
+<p>{{link.store_name}}</p>
+<p>{{link.address}}</p>
+<a href={{link.link}}>{{link.link}}</a>
+<p>{{link.area}}</p>
+<br>
+
+{% endfor %}

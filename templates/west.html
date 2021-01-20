@@ -1,0 +1,18 @@
+{%load static%}
+
+
+<h1> Thrift shops in the West</h1>
+
+
+<a href="/">Home</a>
+<a href='/east'>East</a>
+<a href='/north'>North</a>
+<a href='/south'>South</a>
+
+{% for link in westlinks %}
+<p>{{link.store_name}}</p>
+<p>{{link.address}}</p>
+<a href={{link.link}}>{{link.link}}</a>
+<p>{{link.area}}</p>
+<br>
+{% endfor %}
